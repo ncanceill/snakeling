@@ -10,8 +10,8 @@ on:
       - 'main'
 
 jobs:
-  prepare:
-    name: Prepare
+  quality:
+    name: Check code quality
     runs-on: ubuntu-latest
     steps:
     - name: Check out
@@ -20,43 +20,39 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.11"
+    - name: Run linter
+      run: make lint
+    - name: Run type checker
+      run: make type
+    - name: Run unit tests
+      run: make test
   docs:
     name: Documentation
-    needs: prepare
     runs-on: ubuntu-latest
     steps:
+    - name: Check out
+      uses: actions/checkout@v4
+    - name: Set up
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
     - name: Build documentation
       run: make doc
     - name: Upload documentation
       uses: actions/upload-pages-artifact@v2
       with:
         path: docs/
-  lint:
-    name: Linting
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run linter
-      run: make lint
-  type:
-    name: Typing
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run type checker
-      run: make type
-  test:
-    name: Testing
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run unit tests
-      run: make test
   package:
     name: Package distribution
-    needs: [lint, test, type]
+    needs: quality
     runs-on: ubuntu-latest
     steps:
+    - name: Check out
+      uses: actions/checkout@v4
+    - name: Set up
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
     - name: Build package distribution
       run: make package
     - name: Upload package distribution
