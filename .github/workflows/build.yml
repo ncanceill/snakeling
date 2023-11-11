@@ -3,7 +3,7 @@ description: Build the project
 
 on:
   push:
-  pull-request:
+  pull_request:
   workflow_run:
     workflows: ["Release"]
     types: [requested]
