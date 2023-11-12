@@ -10,7 +10,7 @@ VENV = venv
 
 .PHONY: package doc format lint type test clean
 
-package: format $(BUILD_DIR)
+package: format $(BUILD_DIR) $(VENV)
 	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
 
 doc: $(VENV)
@@ -36,11 +36,6 @@ $(BUILD_DIR):
 
 $(DOC_DIR):
 	mkdir -p $(DOC_DIR)
-
-$(BUILD_VENV): $(SETUP_FILES)
-	$(python) -m venv $(BUILD_VENV)
-	$(BUILD_VENV)/bin/pip install shiv
-	touch $(BUILD_VENV)
 
 $(VENV): $(SETUP_FILES)
 	$(python) -m venv $(VENV)
