@@ -4,7 +4,7 @@
 # See COPYING.md or https://www.gnu.org/licenses/
 
 """
-.. include:: ../README.md
+.. include:: README.md
 """
 
 # Do not add any code to this file.

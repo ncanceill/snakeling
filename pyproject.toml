@@ -9,8 +9,8 @@ authors = [
     {name = "Nicolas Canceill"},
     {email = "nicolas.canceill@gmail.com"},
 ]
-readme = "README.md"
-license = {text = "GNU General Public License v3 or later (GPLv3+)"}
+readme = "src/README.md"
+license = {text = "GPLv3+"}
 dynamic = ["version"]
 requires-python = ">=3.11"
 classifiers = [
