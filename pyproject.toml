@@ -30,11 +30,11 @@ quality = ["black", "flake8", "Flake8-pyproject", "isort"]
 testing = ["mypy", "types-setuptools"]
 
 [tool.flake8]
-exclude = ["benv", "build", "venv"]
+exclude = ["build", "venv"]
 extend-ignore = ["E203"]
 
 [tool.mypy]
-exclude = "benv|build|venv"
+exclude = "build|venv"
 
 [tool.setuptools_scm]
 tag_regex = '^(?:v)(?P<version>\d+(?:\.\d+){0,2})'
