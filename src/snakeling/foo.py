@@ -6,13 +6,13 @@
 """
 This module does not do anything.
 
-In particular, the `Foo` class does nothing.
+In particular, the `Bar` class does nothing.
 """
 
 
-class Foo:
+class Bar:
     """
-    This is the `Foo` class which does nothing.
+    This class does nothing.
     """
 
     pass

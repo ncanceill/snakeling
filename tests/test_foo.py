@@ -1,7 +1,7 @@
-from snakeling.foo import Foo
+from snakeling.foo import Bar
 from unittest import TestCase
 
 
-class FooTest(TestCase):
-    def test_foo(self) -> None:
-        _ = Foo()
+class BarTest(TestCase):
+    def test_bar(self) -> None:
+        _ = Bar()

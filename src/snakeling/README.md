@@ -1,6 +1,6 @@
 The `snakeling` package does not do anything.
 
-In particular, the `snakeling.foo.Foo` class does nothing.
+In particular, the `snakeling.foo.Bar` class does nothing.
 
 ***
 
