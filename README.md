@@ -35,7 +35,11 @@ See the [Python Packaging User Guide](https://packaging.python.org) for more inf
 1. Create a branch protection rule for `main`
    - [x] Require a pull request before merging
    - [x] Require status checks to pass before merging
-     - Status checks that are required: `Build`
+     - [x] Require branches to be up to date before merging
+     - Status checks that are required:
+       - `Check code quality`
+       - `Documentation`
+       - `Package distribution`
 
 Recommended settings:
 - Allow squash merging only
@@ -43,10 +47,7 @@ Recommended settings:
 - Automatically delete head branches
 - Add a `.github/CODEOWNERS` file
 - Further protect the `main` branch:
-  - [x] Require a pull request before merging
-    - [x] Require approvals
-    - [x] Dismiss stale pull request approvals when new commits are pushed
-    - [x] Require review from Code Owners
+  - [x] Require approvals
   - [x] Require conversation resolution before merging 
   - [x] Require signed commits
   - [x] Require linear history
