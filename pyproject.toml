@@ -9,8 +9,8 @@ authors = [
     {name = "Nicolas Canceill"},
     {email = "nicolas.canceill@gmail.com"},
 ]
-readme = "README.md"
-license = {text = "GNU General Public License v3 or later (GPLv3+)"}
+readme = "src/README.md"
+license = {text = "GPLv3+"}
 dynamic = ["version"]
 requires-python = ">=3.11"
 classifiers = [
@@ -21,6 +21,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/ncanceill/snakeling"
+Documentation = "https://ncanceill.github.io/snakeling"
 
 [project.optional-dependencies]
 dev = ["build", "setuptools", "setuptools-scm"]
@@ -29,11 +30,11 @@ quality = ["black", "flake8", "Flake8-pyproject", "isort"]
 testing = ["mypy", "types-setuptools"]
 
 [tool.flake8]
-exclude = ["benv", "build", "venv"]
+exclude = ["build", "venv"]
 extend-ignore = ["E203"]
 
 [tool.mypy]
-exclude = "benv|build|venv"
+exclude = "build|venv"
 
 [tool.setuptools_scm]
 tag_regex = '^(?:v)(?P<version>\d+(?:\.\d+){0,2})'

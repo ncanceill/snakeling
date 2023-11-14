@@ -1,10 +1,10 @@
 # Copyright (C) 2023 Nicolas Canceill
-# This file is part of the `elliptic` package
+# This file is part of the `snakeling` package
 # GNU General Public License v3.0+
 # See COPYING.md or https://www.gnu.org/licenses/
 
 """
-.. include:: ../README.md
+.. include:: README.md
 """
 
 # Do not add any code to this file.

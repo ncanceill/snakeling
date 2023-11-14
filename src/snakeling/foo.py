@@ -1,18 +1,18 @@
 # Copyright (C) 2023 Nicolas Canceill
-# This file is part of the `elliptic` package
+# This file is part of the `snakeling` package
 # GNU General Public License v3.0+
 # See COPYING.md or https://www.gnu.org/licenses/
 
 """
 This module does not do anything.
 
-In particular, the `Foo` class does nothing.
+In particular, the `Bar` class does nothing.
 """
 
 
-class Foo:
+class Bar:
     """
-    This is the `Foo` class which does nothing.
+    This class does nothing.
     """
 
     pass
