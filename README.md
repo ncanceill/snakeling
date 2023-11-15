@@ -2,8 +2,6 @@ This is a test Python package to experiment with build and integration features.
 
 ## Quickstart
 
-See the [Python Packaging User Guide](https://packaging.python.org) for more info.
-
 1. Create a new git repository
    - Write a `pyproject.toml` file
    - Add your code in a `src` directory
@@ -40,17 +38,18 @@ See the [Python Packaging User Guide](https://packaging.python.org) for more inf
        - `Check code quality`
        - `Documentation`
        - `Package distribution`
-
-Recommended settings:
-- Allow squash merging only
-- Always suggest updating pull request branches
-- Automatically delete head branches
-- Add a `.github/CODEOWNERS` file
-- Further protect the `main` branch:
-  - [x] Require approvals
-  - [x] Require conversation resolution before merging 
-  - [x] Require signed commits
-  - [x] Require linear history
+1. Optional improvements
+   - Add a `.github/CODEOWNERS` file
+   - Customize general settings
+     - [ ] Allow merge commits
+     - [ ] Allow rebase merging
+     - [x] Always suggest updating pull request branches
+     - [x] Automatically delete head branches
+   - Improve the `main` branch protection rule
+     - [x] Require approvals
+     - [x] Require conversation resolution before merging 
+     - [x] Require signed commits
+     - [x] Require linear history
 
 ## Build
 
@@ -61,6 +60,14 @@ See the provided [Makefile](Makefile) for convenient targets:
 - `make lint` to check code quality (requires `flake8` and `Flake8-pyproject`)
 - `make type` to typecheck the code (requires `mypy`)
 - `make test` to run unit tests
+
+## References
+
+Useful sources of information:
+- [GNU Make Manual](https://www.gnu.org/software/make/manual/)
+- [PyPI Common questions](https://pypi.org/help/)
+- [Python Packaging User Guide](https://packaging.python.org)
+- [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
 ## License
 
