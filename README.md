@@ -37,7 +37,7 @@ See the [Python Packaging User Guide](https://packaging.python.org) for more inf
    - [x] Require status checks to pass before merging
      - [x] Require branches to be up to date before merging
      - Status checks that are required:
-       - `Check code quality`
+       - `Code quality`
        - `Documentation`
        - `Package distribution`
 
