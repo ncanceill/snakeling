@@ -1,19 +1,19 @@
 python = python3.11
 MAXLINE = 120
-
 SETUP_FILES = pyproject.toml
 
 BUILD_DIR = dist
 DOC_DIR = docs
 SRC_DIR = src
+BUILD_VENV = benv
 VENV = venv
 
 .PHONY: package doc format lint type test clean
 
-package: format $(BUILD_DIR) $(VENV)
+package: format $(BUILD_DIR) $(BUILD_VENV)
 	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
 
-doc: $(VENV)
+doc: $(DOC_DIR) $(VENV)
 	$(VENV)/bin/pdoc -o $(DOC_DIR) \
 	--footer-text="v$$($(VENV)/bin/python -m setuptools_scm)" \
 	$(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
@@ -36,6 +36,11 @@ $(BUILD_DIR):
 
 $(DOC_DIR):
 	mkdir -p $(DOC_DIR)
+
+$(BUILD_VENV): $(SETUP_FILES)
+	$(python) -m venv $(BUILD_VENV)
+	$(BUILD_VENV)/bin/pip install shiv
+	touch $(BUILD_VENV)
 
 $(VENV): $(SETUP_FILES)
 	$(python) -m venv $(VENV)
