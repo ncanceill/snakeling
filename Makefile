@@ -10,7 +10,7 @@ VENV = venv
 
 .PHONY: package doc format lint type test clean
 
-package: format $(BUILD_DIR) $(BUILD_VENV)
+package: $(BUILD_DIR) $(BUILD_VENV)
 	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
 
 doc: $(DOC_DIR) $(VENV)
