@@ -59,7 +59,7 @@ See the provided [Makefile](Makefile) for convenient targets:
 - `make doc` to build HTML documentation from docstrings (requires `pdoc`)
 - `make format` to autoformat the code (requires `black` and `isort`)
 - `make lint` to check code quality (requires `flake8` and `Flake8-pyproject`)
-- `make type` to typecheck the code (requires `mypy` and `types-setuptools`)
+- `make type` to typecheck the code (requires `mypy`)
 - `make test` to run unit tests
 
 ## License
