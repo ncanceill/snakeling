@@ -3,20 +3,20 @@ name: Build
 on:
   push:
     branches:
-      - 'main'
+      - "main"
   pull_request:
     branches:
-      - 'main'
+      - "main"
   workflow_call:
   workflow_run:
     workflows: ["Release"]
     types: [requested]
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   quality:
-    name: Check code quality
+    name: Code quality
     runs-on: ubuntu-latest
     steps:
     - name: Check out
@@ -58,6 +58,8 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.11"
+    - name: Auto format code
+      run: make format
     - name: Build package distribution
       run: make package
     - name: Upload package distribution

@@ -29,12 +29,15 @@ doc = ["pdoc"]
 quality = ["black", "flake8", "Flake8-pyproject", "isort"]
 testing = ["mypy"]
 
+[tool.black]
+exclude = "benv|build|venv"
+
 [tool.flake8]
-exclude = ["build", "venv"]
+exclude = ["benv", "build", "venv"]
 extend-ignore = ["E203"]
 
 [tool.mypy]
-exclude = "build|venv"
+exclude = "benv|build|venv"
 
 [tool.setuptools_scm]
 tag_regex = '^(?:v)(?P<version>\d+(?:\.\d+){0,2})'

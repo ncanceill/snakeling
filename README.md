@@ -47,7 +47,7 @@ This project is distributed in the hope that it will be useful, but WITHOUT ANY 
    - [x] Require status checks to pass before merging
      - [x] Require branches to be up to date before merging
      - Status checks that are required:
-       - `Check code quality`
+       - `Code quality`
        - `Documentation`
        - `Package distribution`
 1. Optional improvements
