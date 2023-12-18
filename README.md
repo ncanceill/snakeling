@@ -1,3 +1,5 @@
+![logo](logo.png)
+
 This is a test Python package to experiment with build and integration features.
 
 ## Quickstart
