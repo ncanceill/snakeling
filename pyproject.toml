@@ -10,7 +10,7 @@ authors = [
     {email = "nicolas.canceill@gmail.com"},
 ]
 readme = "src/README.md"
-license = {text = "GPLv3+"}
+license = {text = "GPL"}
 dynamic = ["version"]
 requires-python = ">=3.11"
 classifiers = [
