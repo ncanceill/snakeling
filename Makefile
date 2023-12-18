@@ -1,9 +1,14 @@
+REPO_URL = https://github.com/ncanceill/snakeling
+
 python = python3.11
 MAXLINE = 120
+
 SETUP_FILES = pyproject.toml
+LOGO_FILE = logo.png
 
 BUILD_DIR = dist
 DOC_DIR = docs
+PDOC_DIR = static
 SRC_DIR = src
 BUILD_VENV = benv
 VENV = venv
@@ -14,8 +19,9 @@ package: $(BUILD_DIR) $(BUILD_VENV)
 	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
 
 doc: $(DOC_DIR) $(VENV)
-	$(VENV)/bin/pdoc -o $(DOC_DIR) \
-	--footer-text="v$$($(VENV)/bin/python -m setuptools_scm)" \
+	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
+	VERSION="v$$($(VENV)/bin/python -m setuptools_scm)" \
+	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo $(LOGO_FILE) --logo-link $(REPO_URL) \
 	$(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
 
 format: $(VENV)

@@ -3,6 +3,7 @@
 This is a test Python project to experiment with build and integration tools.
 
 Features:
+- Custom pdoc style
 - Makefile targets for Python packaging
 - Workflows for publishing to PyPI and GitHub Pages
 
