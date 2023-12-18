@@ -27,7 +27,7 @@ Documentation = "https://ncanceill.github.io/snakeling"
 dev = ["build", "setuptools", "setuptools-scm"]
 doc = ["pdoc"]
 quality = ["black", "flake8", "Flake8-pyproject", "isort"]
-testing = ["mypy", "types-setuptools"]
+testing = ["mypy"]
 
 [tool.black]
 exclude = "benv|build|venv"

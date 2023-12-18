@@ -1,8 +1,18 @@
-This is a test Python package to experiment with build and integration features.
+![logo](logo.png)
+
+This is a test Python project to experiment with build and integration tools.
+
+Features:
+- Makefile targets for Python packaging
+- Workflows for publishing to PyPI and GitHub Pages
+
+## Disclaimer
+
+This project is not affiliated with GitHub.
+
+This project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 ## Quickstart
-
-See the [Python Packaging User Guide](https://packaging.python.org) for more info.
 
 1. Create a new git repository
    - Write a `pyproject.toml` file
@@ -40,17 +50,18 @@ See the [Python Packaging User Guide](https://packaging.python.org) for more inf
        - `Code quality`
        - `Documentation`
        - `Package distribution`
-
-Recommended settings:
-- Allow squash merging only
-- Always suggest updating pull request branches
-- Automatically delete head branches
-- Add a `.github/CODEOWNERS` file
-- Further protect the `main` branch:
-  - [x] Require approvals
-  - [x] Require conversation resolution before merging 
-  - [x] Require signed commits
-  - [x] Require linear history
+1. Optional improvements
+   - Add a `.github/CODEOWNERS` file
+   - Customize general settings
+     - [ ] Allow merge commits
+     - [ ] Allow rebase merging
+     - [x] Always suggest updating pull request branches
+     - [x] Automatically delete head branches
+   - Improve the `main` branch protection rule
+     - [x] Require approvals
+     - [x] Require conversation resolution before merging 
+     - [x] Require signed commits
+     - [x] Require linear history
 
 ## Build
 
@@ -59,14 +70,22 @@ See the provided [Makefile](Makefile) for convenient targets:
 - `make doc` to build HTML documentation from docstrings (requires `pdoc`)
 - `make format` to autoformat the code (requires `black` and `isort`)
 - `make lint` to check code quality (requires `flake8` and `Flake8-pyproject`)
-- `make type` to typecheck the code (requires `mypy` and `types-setuptools`)
+- `make type` to typecheck the code (requires `mypy`)
 - `make test` to run unit tests
+
+## References
+
+Useful sources of information:
+- [GNU Make Manual](https://www.gnu.org/software/make/manual/)
+- [PyPI Common questions](https://pypi.org/help/)
+- [Python Packaging User Guide](https://packaging.python.org)
+- [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
 ## License
 
-This project is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+The code is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+The logo is free art: you can redistribute it and/or modify it under the terms of the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/) as published by Creative Commons.
 
 You should have received a [copy](COPYING.md) of the GNU General Public License along with this project.
 
