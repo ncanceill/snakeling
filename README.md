@@ -1,6 +1,10 @@
 ![logo](logo.png)
 
-This is a test Python package to experiment with build and integration features.
+This is a test Python project to experiment with build and integration tools.
+
+Features:
+- Makefile targets for Python packaging
+- Workflows for publishing to PyPI and GitHub Pages
 
 ## Disclaimer
 
