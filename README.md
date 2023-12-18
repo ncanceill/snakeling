@@ -2,6 +2,12 @@
 
 This is a test Python package to experiment with build and integration features.
 
+## Disclaimer
+
+This project is not affiliated with GitHub.
+
+This project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
 ## Quickstart
 
 1. Create a new git repository
@@ -73,9 +79,9 @@ Useful sources of information:
 
 ## License
 
-This project is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+The code is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+The logo is free art: you can redistribute it and/or modify it under the terms of the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/) as published by Creative Commons.
 
 You should have received a [copy](COPYING.md) of the GNU General Public License along with this project.
 
