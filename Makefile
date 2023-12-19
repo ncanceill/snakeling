@@ -1,5 +1,3 @@
-REPO_URL = https://github.com/ncanceill/snakeling
-
 python = python3.11
 MAXLINE = 120
 
@@ -13,6 +11,8 @@ SRC_DIR = src
 BUILD_VENV = benv
 VENV = venv
 
+get_url = from tomllib import loads; print(loads(open("pyproject.toml").read().strip())["project"]["urls"]["Homepage"])
+
 .PHONY: package doc format lint type test clean
 
 package: $(BUILD_DIR) $(BUILD_VENV)
@@ -21,8 +21,9 @@ package: $(BUILD_DIR) $(BUILD_VENV)
 doc: $(DOC_DIR) $(VENV)
 	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
 	VERSION="v$$($(VENV)/bin/python -m setuptools_scm)" \
-	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo $(LOGO_FILE) --logo-link $(REPO_URL) \
-	$(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
+	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo $(LOGO_FILE) --logo-link $$( \
+		$(VENV)/bin/python -c '$(get_url)' \
+	) $(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
 
 format: $(VENV)
 	$(VENV)/bin/isort -l $(MAXLINE) --profile black --no-sections --combine-as --gitignore .
