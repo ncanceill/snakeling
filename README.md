@@ -78,6 +78,7 @@ See the provided [Makefile](Makefile) for convenient targets:
 
 Useful sources of information:
 - [GNU Make Manual](https://www.gnu.org/software/make/manual/)
+- [pdoc Documentation](https://pdoc.dev/docs/pdoc.html)
 - [PyPI Common questions](https://pypi.org/help/)
 - [Python Packaging User Guide](https://packaging.python.org)
 - [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
