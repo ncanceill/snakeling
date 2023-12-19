@@ -39,7 +39,7 @@ $(DOC_DIR):
 
 $(BUILD_VENV): $(SETUP_FILES)
 	$(python) -m venv $(BUILD_VENV)
-	$(BUILD_VENV)/bin/pip install -U pip shiv
+	$(BUILD_VENV)/bin/pip install -U pip
 
 $(VENV): $(SETUP_FILES)
 	$(python) -m venv $(VENV)
