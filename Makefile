@@ -39,15 +39,12 @@ $(DOC_DIR):
 
 $(BUILD_VENV): $(SETUP_FILES)
 	$(python) -m venv $(BUILD_VENV)
-	$(BUILD_VENV)/bin/pip install shiv
-	touch $(BUILD_VENV)
+	$(BUILD_VENV)/bin/pip install -U pip
 
 $(VENV): $(SETUP_FILES)
 	$(python) -m venv $(VENV)
 	$(VENV)/bin/pip install -U pip
 	$(VENV)/bin/pip install -e .[dev,doc,quality,testing]
-	touch $(VENV)
 
 clean:
-	rm -rf $(BUILD_DIR) $(DOC_DIR) $(VENV) ./*.egg-info ./build $(PDOC)/$(LOGO).html
-	git clean -f
+	git clean -dfx
