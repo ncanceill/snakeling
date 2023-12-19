@@ -1,12 +1,17 @@
 python = python3.11
 MAXLINE = 120
+
 SETUP_FILES = pyproject.toml
+LOGO_FILE = logo.png
 
 BUILD_DIR = dist
 DOC_DIR = docs
+PDOC_DIR = static
 SRC_DIR = src
 BUILD_VENV = benv
 VENV = venv
+
+get_url = from tomllib import loads; print(loads(open("pyproject.toml").read().strip())["project"]["urls"]["Homepage"])
 
 .PHONY: package doc format lint type test clean
 
@@ -14,9 +19,11 @@ package: $(BUILD_DIR) $(BUILD_VENV)
 	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
 
 doc: $(DOC_DIR) $(VENV)
-	$(VENV)/bin/pdoc -o $(DOC_DIR) \
-	--footer-text="v$$($(VENV)/bin/python -m setuptools_scm)" \
-	$(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
+	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
+	VERSION="v$$($(VENV)/bin/python -m setuptools_scm)" \
+	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo $(LOGO_FILE) --logo-link $$( \
+		$(VENV)/bin/python -c '$(get_url)' \
+	) $(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
 
 format: $(VENV)
 	$(VENV)/bin/isort -l $(MAXLINE) --profile black --no-sections --combine-as --gitignore .
