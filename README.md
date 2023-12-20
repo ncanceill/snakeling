@@ -17,10 +17,12 @@ This project is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 1. Create a new git repository
    - Write a `pyproject.toml` file
+   - Draw a logo for your project
    - Add your code in a `src` directory
    - Add your tests in a `tests` directory
    - Copy the `Makefile` and adapt it as needed
    - Copy the `.github/workflows` directory
+   - Copy the `static` directory
 1. Create a new GitHub repository and tune the settings
    - Create a tag protection rule
      - Tag: `v*`
