@@ -47,11 +47,13 @@ $(DOC_DIR):
 $(BUILD_VENV): $(SETUP_FILES)
 	$(python) -m venv $(BUILD_VENV)
 	$(BUILD_VENV)/bin/pip install -U pip
+	touch $(BUILD_VENV)
 
 $(VENV): $(SETUP_FILES)
 	$(python) -m venv $(VENV)
 	$(VENV)/bin/pip install -U pip
 	$(VENV)/bin/pip install -e .[dev,doc,quality,testing]
+	touch $(VENV)
 
 clean:
 	git clean -dfx
