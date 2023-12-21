@@ -21,9 +21,9 @@ package: $(BUILD_DIR) $(BUILD_VENV)
 doc: $(DOC_DIR) $(VENV)
 	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
 	VERSION="v$$($(VENV)/bin/python -m setuptools_scm)" \
-	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo $(LOGO_FILE) --logo-link $$( \
+	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo "$(LOGO_FILE)" --logo-link "$$( \
 		$(VENV)/bin/python -c '$(get_url)' \
-	) $(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
+	)" $(filter-out %.egg-info/,$(wildcard $(SRC_DIR)/*/))
 
 format: $(VENV)
 	$(VENV)/bin/isort -l $(MAXLINE) --profile black --no-sections --combine-as --gitignore .
