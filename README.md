@@ -2,10 +2,14 @@
 
 This is a test Python project to experiment with build and integration tools.
 
-Features:
-- Custom pdoc style
-- Makefile targets for Python packaging
-- Workflows for publishing to PyPI and GitHub Pages
+## Features
+
+- HTML documentation from docstrings with custom style (requires `pdoc`)
+- Package publishing to TestPyPI (requires `build`)
+- Automated code formatting (requires `black` and `isort`)
+- Code quality auditing (requires `flake8` and `Flake8-pyproject`)
+- Static code type checking (requires `mypy`)
+- GitHub workflows for build and release
 
 ## Disclaimer
 
@@ -65,16 +69,6 @@ This project is distributed in the hope that it will be useful, but WITHOUT ANY 
      - [x] Require conversation resolution before merging 
      - [x] Require signed commits
      - [x] Require linear history
-
-## Build
-
-See the provided [Makefile](Makefile) for convenient targets:
-- `make package` to build source and wheel distributions (requires `build`)
-- `make doc` to build HTML documentation from docstrings (requires `pdoc`)
-- `make format` to autoformat the code (requires `black` and `isort`)
-- `make lint` to check code quality (requires `flake8` and `Flake8-pyproject`)
-- `make type` to typecheck the code (requires `mypy`)
-- `make test` to run unit tests
 
 ## References
 
