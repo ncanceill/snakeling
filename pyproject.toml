@@ -24,7 +24,7 @@ Homepage = "https://github.com/ncanceill/snakeling"
 Documentation = "https://ncanceill.github.io/snakeling"
 
 [project.optional-dependencies]
-dev = ["build", "setuptools", "setuptools-scm"]
+dev = ["setuptools", "setuptools-scm"]
 doc = ["pdoc"]
 quality = ["black", "flake8", "Flake8-pyproject", "isort"]
 testing = ["mypy"]
