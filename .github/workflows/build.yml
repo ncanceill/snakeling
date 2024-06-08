@@ -22,7 +22,7 @@ jobs:
     - name: Check out
       uses: actions/checkout@v4
     - name: Set up
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Run linter
@@ -38,13 +38,13 @@ jobs:
     - name: Check out
       uses: actions/checkout@v4
     - name: Set up
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Build documentation
       run: make doc
     - name: Upload documentation
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: docs/
   package:
@@ -55,13 +55,13 @@ jobs:
     - name: Check out
       uses: actions/checkout@v4
     - name: Set up
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Build package distribution
       run: make package
     - name: Upload package distribution
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: distribution
         path: dist/
