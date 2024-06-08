@@ -16,7 +16,7 @@ get_url = from tomllib import loads; print(loads(open("pyproject.toml").read().s
 .PHONY: package doc format lint type test clean
 
 package: $(BUILD_DIR) $(BUILD_VENV)
-	$(VENV)/bin/python -m build -o $(BUILD_DIR) .
+	$(BUILD_VENV)/bin/python -m build -o $(BUILD_DIR) .
 
 doc: $(DOC_DIR) $(VENV)
 	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
@@ -46,7 +46,7 @@ $(DOC_DIR):
 
 $(BUILD_VENV): $(SETUP_FILES)
 	$(python) -m venv $(BUILD_VENV)
-	$(BUILD_VENV)/bin/pip install -U pip
+	$(BUILD_VENV)/bin/pip install -U pip build
 	touch $(BUILD_VENV)
 
 $(VENV): $(SETUP_FILES)
