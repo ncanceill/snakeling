@@ -1,4 +1,4 @@
-![logo](logo.png)
+![logo](docs/logo.png)
 
 This is a test Python project to experiment with build and integration tools.
 
@@ -21,7 +21,7 @@ This project is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 1. Create a new git repository
    - Write a `pyproject.toml` file
-   - Draw a logo for your project
+   - Add your logo in a `docs` directory
    - Add your code in a `src` directory
    - Add your tests in a `tests` directory
    - Copy the `Makefile` and adapt it as needed

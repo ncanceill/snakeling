@@ -3,5 +3,6 @@ __pycache__/
 benv/
 build/
 dist/
-docs/
+docs/*
+!docs/logo.png
 venv/
