@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Nicolas Canceill
+# Copyright (C) 2023-2024 Nicolas Canceill
 # This file is part of the `snakeling` package
 # GNU General Public License v3.0+
 # See COPYING.md or https://www.gnu.org/licenses/

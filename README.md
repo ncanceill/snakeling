@@ -89,4 +89,4 @@ You should have received a [copy](COPYING.md) of the GNU General Public License 
 
 ***
 
-Copyright © 2023 Nicolas Canceill
+Copyright © 2023-2024 Nicolas Canceill

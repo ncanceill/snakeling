@@ -4,4 +4,4 @@ In particular, the `snakeling.foo.Bar` class does nothing.
 
 ***
 
-Copyright © 2023 Nicolas Canceill
+Copyright © 2023-2024 Nicolas Canceill
