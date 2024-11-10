@@ -12,4 +12,4 @@ This package is free software: you can redistribute it and/or modify it under th
 
 ***
 
-Copyright © 2023 Nicolas Canceill
+Copyright © 2023-2024 Nicolas Canceill
