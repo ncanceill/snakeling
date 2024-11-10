@@ -18,8 +18,7 @@ get_url = from tomllib import loads; print(loads(open("pyproject.toml").read().s
 package: $(BUILD_DIR) $(BUILD_VENV)
 	$(BUILD_VENV)/bin/python -m build -o $(BUILD_DIR) .
 
-doc: $(DOC_DIR) $(VENV)
-	cp $(LOGO_FILE) $(DOC_DIR)/$(LOGO_FILE)
+doc: $(DOC_DIR)/$(LOGO_FILE) $(VENV)
 	VERSION="v$$($(VENV)/bin/python -m setuptools_scm)" \
 	$(VENV)/bin/pdoc -o $(DOC_DIR) -t $(PDOC_DIR) --logo "$(LOGO_FILE)" --logo-link "$$( \
 		$(VENV)/bin/python -c '$(get_url)' \
@@ -40,9 +39,6 @@ test: $(VENV)
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
-
-$(DOC_DIR):
-	mkdir -p $(DOC_DIR)
 
 $(BUILD_VENV): $(SETUP_FILES)
 	$(python) -m venv $(BUILD_VENV)
